@@ -1,12 +1,13 @@
 def add_little_endian(a,b,carry=0):
     """
     assumes both a and b are tuples of equal length, little endian.
-    Recursive approach: add the leftmost digit and then add the remaining
-    n-1 length tuples.
+    Recursive approach: add the leftmost digit and then add the digits in
+    the remaining n-1 length tuples.
     """
     length = len(a)
 
     # Base case.  If a and b are empty, just return the carry number
+    # use a list here so that it can be unpacked into the tuple
     if length == 0 :
         return [] if carry == 0 else [carry]
 
