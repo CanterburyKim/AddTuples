@@ -23,5 +23,17 @@ def add_little_endian(a,b,carry=0):
     return( digit, *add_little_endian( a[1:], b[1:], digit_carry ) )
 
 
-print( add_little_endian((4,7), (5,9)) )
-print( add_little_endian((4,7,3,9,5,4), (5,9,6,3,7,1)) )
+
+def main():
+    first_tuple = (4,7)
+    second_tuple = (5,9)
+    result = add_little_endian( first_tuple, second_tuple)
+    print(f'  {first_tuple}\n+ {second_tuple}\n= {result}')
+
+    first_tuple = (4,7,3,9,5,4)
+    second_tuple = (5,9,6,3,7,1)
+    result = add_little_endian( first_tuple, second_tuple)
+    print(f'  {first_tuple}\n+ {second_tuple}\n= {result}')
+
+if __name__ == '__main__':
+    main()
