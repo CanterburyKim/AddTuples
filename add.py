@@ -28,13 +28,23 @@ def main():
     first_tuple = (4,7)
     second_tuple = (5,9)
     result = add_little_endian( first_tuple, second_tuple)
-    print(f'  {first_tuple}\n+ {second_tuple}\n= {result}')
+    print(f'  {first_tuple}\n+ {second_tuple}')
+    for i in range(3*len(result) + 2):
+        print('-', end='')
+    print()
 
-    print('\n---\n')
+    print(f'= {result}')
+
+    print('\n***\n')
     first_tuple = (4,7,3,9,5,4)
     second_tuple = (5,9,6,3,7,1)
     result = add_little_endian( first_tuple, second_tuple)
-    print(f'  {first_tuple}\n+ {second_tuple}\n= {result}')
+    print(f'  {first_tuple}\n+ {second_tuple}')
+    for i in range(3*len(result) + 2):
+        print('-', end='')
+    print()
+
+    print(f'= {result}')
 
 if __name__ == '__main__':
     main()
